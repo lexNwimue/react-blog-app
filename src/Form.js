@@ -1,8 +1,8 @@
 const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const title = document.getElementById("title").value;
-    const body = document.getElementById("body").value;
+    // const title = document.getElementById("title").value;
+    // const body = document.getElementById("body").value;
   };
   return (
     <>
