@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCKRT7vD1hqTcDYdlZZ3c7QaZ4ZuZVk8Mo",
@@ -26,4 +26,4 @@ getDocs(collectionRef).then((snapshot) => {
   // console.log(documents);
 });
 
-export { documents };
+export { documents, addDoc, collectionRef };
