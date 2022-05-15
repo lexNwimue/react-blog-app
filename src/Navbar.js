@@ -1,20 +1,16 @@
-import BlogList from "./BlogList";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
       <div className="navbar">
         <h3 className="brand">The React Blog</h3>
-        <a href="/" className="nav-item">
+        <Link to="/" className="nav-item">
           Home
-        </a>
-        <a href="/create" className="nav-item">
+        </Link>
+        <Link to="/create" className="nav-item">
           Create Blog
-        </a>
-      </div>
-
-      <div className="content-area">
-        <BlogList />
+        </Link>
       </div>
     </div>
   );

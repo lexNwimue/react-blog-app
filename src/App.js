@@ -1,22 +1,25 @@
-// import BlogList from "./BlogList";
-import Form from "./Form";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import "./index.css";
 import Navbar from "./Navbar";
+import BlogList from "./BlogList";
+import Form from "./Form";
 
 function App() {
-  // const blogs = [
-  //   { id: 1, title: "A Happy day", author: "Brendan Rogers" },
-  //   { id: 2, title: "A Happy day", author: "Brendan Rogers" },
-  //   { id: 3, title: "A Happy day", author: "Brendan Rogers" },
-  //   { id: 4, title: "A Happy day", author: "Brendan Rogers" },
-  // ];
-
   return (
-    <div className="App">
-      <Navbar />
-      {/* <BlogList blogs={blogs} /> */}
-      <Form />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<BlogList />}>
+            {/* <BlogList /> */}
+          </Route>
+          <Route path="/create" element={<Form />}>
+            {/* <Form /> */}
+          </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

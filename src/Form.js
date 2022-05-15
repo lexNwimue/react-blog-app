@@ -1,29 +1,30 @@
 const Form = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // const title = document.getElementById("title").value;
-    // const body = document.getElementById("body").value;
-  };
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     console.log("Form submitted");
+  //   };
   return (
     <>
-      <label htmlFor="title">Title</label>
-      <input
-        type="text"
-        name="title"
-        id="title"
-        placeholder="Enter blog title"
-      />
-      <br />
-      <label htmlFor="body">Title</label>
-      <textarea
-        name="body"
-        id=""
-        cols="30"
-        rows="10"
-        placeholder="Enter article here..."
-      ></textarea>
+      <div className="container">
+        <h2 className="form-header">Create a New Blog</h2>
 
-      <button onClick={(e) => handleSubmit(e)}>Submit</button>
+        <form action="">
+          <label htmlFor="title">Title</label>
+          <br />
+          <input type="text" id="title" name="title" />
+          <br />
+          <label htmlFor="author">Author</label>
+          <br />
+          <input type="text" id="author" name="author" />
+          <br />
+          <label htmlFor="body">Body</label>
+          <textarea name="body" id="body"></textarea>
+          <div className="btn-group">
+            <button className="create-btn">Create</button>
+            <button className="clear-btn">Clear</button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

@@ -16,7 +16,7 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 const collectionRef = collection(db, "blogs");
 
-// Get documents from collection
+// Get documents from collection and add them to the documents array
 let documents = [];
 getDocs(collectionRef).then((snapshot) => {
   snapshot.docs.forEach((doc) => {
